@@ -64,3 +64,25 @@ console.log(`Animal speed is ${rabbit1.runSpeed}`);
 
 // with the super keyword we can extend methods from the parent class
 fish1.swim();
+
+//////////////////////////////////////////added
+
+class Turtle extends Animal {
+  constructor(name, age, crawlSpeed) {
+    super(name, age);
+    this.crawlSpeed = crawlSpeed;
+  }
+
+  crawl() {
+    console.log(`This ${this.name} can crawl`);
+    super.move(this.crawlSpeed);
+  }
+}
+
+const turtle1 = new Turtle("turtle1", 3, 2);
+
+console.log(`Animal name is ${turtle1.name}`);
+console.log(`Animal age is ${turtle1.age}`);
+console.log(`Animal speed is ${turtle1.crawlSpeed}`);
+
+turtle1.crawl();

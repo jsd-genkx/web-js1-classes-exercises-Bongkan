@@ -111,12 +111,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>Date: ${this.date}</p>
             <ul class="list-disc pl-5">
               ${this.orderDetails
-                .map(
-                  (item) => `
+          .map(
+            (item) => `
                 <li>${item.name} - ${item.quantity} x $${item.unitPrice} = $${item.totalPrice}</li>
               `
-                )
-                .join("")}
+          )
+          .join("")}
             </ul>
             <p class="font-bold">Grand Total: $${this.grandTotal}</p>
           `;
